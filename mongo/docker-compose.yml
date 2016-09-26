@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+    artifactory:
+        image: mongo
+        container_name: mongo
+        ports:
+            - 27017:27017
+        volumes:
+            - $MONGO_HOME:/data/db

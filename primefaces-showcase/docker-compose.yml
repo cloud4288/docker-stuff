@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+    primefaces-showcase:
+        image: primefaces-showcase
+        container_name: primefaces-showcase
+        ports:
+            - 9090:8080
