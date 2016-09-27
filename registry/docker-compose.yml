@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  registry:
+    image: registry:2.5
+    container_name: registry
+    ports:
+      - "5000:5000"
+    volumes:
+      - ${PWD}/config.yml:/etc/docker/registry/config.yml
+      - ~/Applications/docker-registry:/var/lib/registry

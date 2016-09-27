@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  registry:
+    image: konradkleine/docker-registry-frontend:v2
+    container_name: docker-registry-frontend
+    ports:
+      - "8989:80"
+    environment:
+      ENV_DOCKER_REGISTRY_HOST=localhost
+      ENV_DOCKER_REGISTRY_PORT=5000

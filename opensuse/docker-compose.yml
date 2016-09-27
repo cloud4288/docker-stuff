@@ -1,0 +1,6 @@
+version: '2'
+
+services:
+  registry:
+    image: opensuse:leap
+    container_name: opensuse
