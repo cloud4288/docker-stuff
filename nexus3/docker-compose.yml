@@ -1,10 +1,19 @@
 version: '2'
 
 services:
-  registry:
-    image: sonatype/nexus3:3.0.0
-    container_name: nexus3
-    ports:
-      - "8081:8081"
-    volumes:
-      - ~/Applications/nexus3/nexus-data:/nexus-data
+    nexus3:
+        image: sonatype/nexus3:3.0.0
+        container_name: nexus3
+        ports:
+            - "8081:8081"
+        volumes:
+            - nexus3_data:/opt/sonatype/nexus
+        networks:
+            - nexu3net
+
+networks:
+    nexu3net:
+        driver: bridge
+
+volumes:
+    nexus3_data:
