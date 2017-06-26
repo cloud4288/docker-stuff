@@ -1,10 +1,9 @@
 version: '2'
 
 services:
-    postgres:
+    activemq:
         image: webcenter/activemq:latest
         ports: 
-            - "5432:5432"
             - "8161:8161"
             - "61616:61616"
             - "61613:61613"
