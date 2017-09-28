@@ -4,6 +4,7 @@ services:
     activemq:
         image: webcenter/activemq:latest
         ports: 
+            - "1099:1099"
             - "8161:8161"
             - "61616:61616"
             - "61613:61613"
