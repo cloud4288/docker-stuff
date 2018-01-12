@@ -2,11 +2,11 @@ version: '2'
 
 services:
   sonarqube:
-    image: sonarqube:6.0-alpine
+    image: sonarqube:6.7.1-alpine
     container_name: sonarqube
     ports:
-      - "9000:9000"
-      - "9092:9092"
+      - "9100:9000"
+      - "9192:9092"
     depends_on: 
       - db
     networks:
@@ -20,7 +20,7 @@ services:
       - sonarqube_bundled-plugins:/opt/sonarqube/lib/bundled-plugins
   
   db:
-    image: postgres:9.6
+    image: postgres:9.6.6
     container_name: postgres
     networks:
       - sonarnet
