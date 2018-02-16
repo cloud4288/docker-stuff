@@ -7,10 +7,13 @@ services:
         ports:
             - "8082:8081"
         volumes:
-            - ~/volumes/nexus-data:/nexus-data
+            - nexus-data:/nexus-data
         networks:
             - nexus3net
 
 networks:
     nexus3net:
         driver: bridge
+
+volumes:
+    nexus-data:

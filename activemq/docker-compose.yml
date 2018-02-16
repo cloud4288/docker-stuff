@@ -9,8 +9,11 @@ services:
             - "61616:61616"
             - "61613:61613"
         volumes:
-            - ~/volumes/activemq/data/activemq:/data/activemq
-            - ~/volumes/activemq/var/log/activemq:/var/log/activemq
+            - activemq_data:/data/activemq
+            - activemq_log:/var/log/activemq
         environment: 
             ACTIVEMQ_ADMIN_LOGIN: admin
             ACTIVEMQ_ADMIN_PASSWORD: admin
+volumes:
+    activemq_data:
+    activemq_log:
